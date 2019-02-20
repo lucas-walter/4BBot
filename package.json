@@ -1,0 +1,20 @@
+{
+  "name": "3bbot",
+  "version": "1.0.0",
+  "description": "Bot for the 3BHIF Discord Server",
+  "main": "3bbot.js",
+  "scripts": {
+    "test": "echo \"This is a Discord Bot, there are no tests. Just run it using 3bbot.js!\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "Lucas Walter",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/node": "^4.6.3",
+    "discord.js": "^11.4.2",
+    "mysql": "^2.16.0"
+  }
+}
