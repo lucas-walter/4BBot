@@ -61,7 +61,7 @@ client.on('message', msg => {
 			  .catch(collected => msg.reply(`Du hast gerade 30 Sekunden meiner Lebenszeit mit Warten verschwendet. Danke.`));  
 		  })
 	  }
-	  if (msg.channel.id == 489095846877593610) msg.delete(5000);
+	  if (msg.channel.name == "hü") msg.delete(5000);
   }
   
   if (!msg.author.bot && msg.content.startsWith('!termin ')) {
@@ -93,7 +93,7 @@ client.on('message', msg => {
 			});
 			con.end();
 	  }
-	  if (msg.channel.id == 489094711764844564) msg.delete(5000);
+	  if (msg.channel.name == "termine") msg.delete(5000);
   }
   
   if (msg.content.toLowerCase().startsWith('anwesend')) {
@@ -113,7 +113,7 @@ client.on('message', msg => {
 
 // Automod
 client.on('message', msg => {
-	if ((msg.channel.id == '488594719392399365' || msg.channel.id == '489094711764844564' || msg.channel.id == '488685275015282688') && msg.content.match(/pls (boobies|meme|gif|steal|rob|daily|inv|rich|bank|cat|animals|aww|birb|ducc|foxxy|hootyboi|snek|asktrump|creditscore|dankrate|deletethis|penis|4chan|fight|guess|trivia|partyparrot).*/gi)) {
+	if ((msg.channel.name == "allgemein" || msg.channel.name == "termine" || msg.channel.id == "hü") && msg.content.match(/pls (boobies|meme|gif|steal|rob|daily|inv|rich|bank|cat|animals|aww|birb|ducc|foxxy|hootyboi|snek|asktrump|creditscore|dankrate|deletethis|penis|4chan|fight|guess|trivia|partyparrot).*/gi)) {
 		mamlog('DEL_COMMANDS', msg)
 		msg.delete(1);
 	}
@@ -121,7 +121,7 @@ client.on('message', msg => {
 
 // Server Organisation
 client.on('messageDelete', msg => {
-	if (msg.channel.id == '489094711764844564') {
+	if (msg.channel.name == "termine") {
 		msg.guild.channels.find("name","termin-archiv").send(msg.content, msg.embeds[0]);
 	}
 });
