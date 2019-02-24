@@ -1,10 +1,10 @@
 ---------------------------------------------------------------
----				3BBot Database Creation Script				---
----		This is a self-contained Script that creates the	---
----		Database Layout used by 3BBot.						---
----		This drops the old Table before re-creating it!		---
----		For more information about setting up 3BBot			---
----		consult readme.md									---
+---             3BBot Database Creation Script              ---
+---     This is a self-contained Script that creates the    ---
+---     Database Layout used by 3BBot.                      ---
+---     This drops the old Table before re-creating it!     ---
+---     For more information about setting up 3BBot         ---
+---     consult readme.md                                   ---
 ---------------------------------------------------------------
 
 CREATE DATABASE  IF NOT EXISTS `3bbot`;
