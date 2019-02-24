@@ -1,3 +1,9 @@
+/**   CONFIG
+ *  Copy this file and rename it to 'config.js', then enter the values.
+ *  The Comments will help you know what to insert.
+ *  DO NOT share this file with anyone, if you push to Git it will be ignored.
+*/
+
 module.exports = {
 	"discord": {
 		"token": "WirMachenUnserenTokenNichtÖffentlichDanke" // Discord Token, get from https://discordapp.com/developers/applications/ -> Application -> Bot -> Token
