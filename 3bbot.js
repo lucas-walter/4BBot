@@ -12,6 +12,8 @@ client.on('ready', () => {
 client.on('error', e => {});
 
 client.on('message', msg => {
+	if (msg.startsWith("!")) msg.reply("3BBot läuft im **Safe Mode**.").delete(5000);
+	
   if (!msg.author.bot && msg.content.startsWith('!hü')) {
 	  if (msg.content.match(/!hü (<#\d*>) (.*) bis (\S).*/gi)) {
 		  var hueregex = /!hü <#(\d*)> (.*):(.*) bis (.*).*/gi
