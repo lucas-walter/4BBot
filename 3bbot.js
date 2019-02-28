@@ -3,9 +3,7 @@ const anwesend = ["anwesend","hier","mit dabei","präsent","vor Ort","zeigt sich
 const client = new Discord.Client();
 const cfg = require('./config.js');
 const Sentry = require('@sentry/node');
-const mysql = require('mysql');
 Sentry.init(cfg.sentry);
-var con = mysql.createConnection(cfg.mysql);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -40,15 +38,6 @@ client.on('message', msg => {
 		  }
 		  else {
 			  msg.guild.channels.find("name","hü").send("", embed).then(g => sentmsg = g.id)
-			  
-				con.connect(function(err) {
-				  if (err) throw err;
-				  var sql = "INSERT INTO aufgaben (fach, titel, beschreibung, bis, vom, msgid) VALUES ('" + msg.guild.channels.get(res[1]).name + "', '" + res[2] + "', '" + res[3] + "', '" + dateun + "', " + con.escape(new Date()) + ", " + sentmsg + ")";
-				  con.query(sql, function (err, result) {
-					if (err) throw err;
-				  });
-				});
-				con.end();
 		  }
 
 		  
@@ -84,14 +73,7 @@ client.on('message', msg => {
 		  var mid;
 		  msg.guild.channels.find("name","termine").send("", embed).then(sentm => mid = sentm.id);
 		  
-		  con.connect(function(err) {
-			  if (err) throw err;
-			  var sql = "INSERT INTO termine (fach, titel, beschreibung, vom, am, msgid) VALUES ('" + msg.guild.channels.get(res[1]).name + "', '" + res[2] + "', '" + res[3] + "', " + con.escape(new Date()) + ", '" + res[4] + "', " + mid + ")";
-			  con.query(sql, function (err, result) {
-				if (err) throw err;
-			  });
-			});
-			con.end();
+		  
 	  }
 	  if (msg.channel.name == "termine") msg.delete(5000);
   }
