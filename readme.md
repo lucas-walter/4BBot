@@ -7,7 +7,7 @@ To run the bot you will need the following:
 - A Discord Server
 - A Discord Bot Token, you can get this from https://discordapp.com/developers/applications/ -> Application -> Bot -> Token
 - A Sentry.io Project and its DSN, see https://docs.sentry.io/error-reporting/quickstart/?platform=node
-- (Kind of optional, unless you want to comment out parts of the code) A MySQL Database and a user for it.
+- (Kind of required, unless you want to comment out parts of the code) A MySQL Database and a user for it.
 
 Rename `config.example.js` to `config.js` and set the values inside it.
 You can run `database-init-script.sql` to create the Database along with its required Tables.
