@@ -1,7 +1,7 @@
 {
   "name": "3bbot",
   "version": "1.0.0",
-  "description": "Bot for the 3BHIF Discord Server",
+  "description": "Bot for the 4BHIF Discord Server",
   "main": "3bbot.js",
   "scripts": {
     "test": "echo \"This is a Discord Bot, there are no tests. Just run it using 3bbot.js!\" && exit 1"

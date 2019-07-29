@@ -1,6 +1,8 @@
-# 3BBot
+# 4BBot [BETA]
 
-3BBot is a Discord Bot that was created for serving the 3BHIF Discord Server. Here it is open-sourced. Feel free to PR Features or create issues, I will see them.
+4BBot is a Discord Bot that was created for serving the 4BHIF Discord Server. Here it is open-sourced. Feel free to PR Features or create issues, I will see them.
+
+4BBot was created based off of 3BBot. Its code can be downloaded from [this release](https://github.com/lucas-walter/4BBot/releases/tag/3bbot-final).
 
 ## Running the Bot
 To run the bot you will need the following:
